@@ -276,7 +276,7 @@ section .collapse {
 .text-container pre {
   background-color: var(--code-background);
   border-radius: 0.5rem;
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 3.5rem;
   white-space: normal;
   font-size: 1.6rem;
 }
