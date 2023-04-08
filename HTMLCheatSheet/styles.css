@@ -7,7 +7,7 @@
 }
 
 body {
-  padding: 3rem 1.5em;
+  padding: 2.5rem 1.5em;
 }
 
 header {
@@ -44,4 +44,45 @@ a {
 
 a:hover {
   color: slateblue;
+}
+
+main {
+  max-width: 875px;
+  margin: 0 auto;
+}
+
+section h2 {
+  margin: 1.75rem 0;
+  font-size: 2rem;
+  font-family: 'Work Sans', sans-serif;
+}
+
+section table {
+  width: 100%;
+  border: 3px solid darkgray;
+  border-spacing: 0.5rem;
+  border-collapse: collapse;
+}
+
+section table th,
+section table td {
+  border: 1px solid lightgray;
+  padding: 0.75rem 0.25rem;
+  font-family: 'Work Sans', sans-serif;
+}
+
+section table td:nth-child(1) {
+  text-align: right;
+}
+
+section table thead {
+  font-size: 1.75rem;
+}
+
+section table .tag {
+  background-color: gainsboro;
+  padding: 0.2rem 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 0.25rem;
+  width: max-content;
 }
