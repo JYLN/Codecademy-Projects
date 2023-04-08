@@ -13,6 +13,7 @@
 
   --main-background: #ecf0f1;
   --blurple: #5865f2;
+  --border-color: var(--sleek-davygrey);
 
   --dracula-back: #282a36;
   --dracula-fore: #f8f8f2;
@@ -95,3 +96,35 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+/* Section Styles */
+section {
+  border: 2px solid var(--border-color);
+  padding: 1.2rem 1.4rem;
+}
+
+section h2 {
+  font-family: var(--font-abril);
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+section hr {
+  height: 0.2rem;
+  background-color: var(--border-color);
+  margin: 0.5rem 0 1.5rem;
+}
+
+section .collapse {
+  background-color: var(--blurple);
+  color: var(--white);
+  font-family: var(--font-jetbrains);
+  cursor: pointer;
+  padding: 1.2rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Color Section */
