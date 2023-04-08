@@ -293,3 +293,18 @@ pre code {
   border-radius: 0.15rem;
   margin: 0.15rem;
 }
+
+footer {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: var(--font-worksans);
+}
+
+a {
+  color: var(--blurple);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
