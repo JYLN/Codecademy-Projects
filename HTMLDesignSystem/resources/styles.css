@@ -1,5 +1,5 @@
 /* Imports and Variables */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:ital,wght@0,400;1,500;1,700&family=Poppins:ital,wght@0,400;0,700;1,500&family=Work+Sans:ital,wght@0,400;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:ital,wght@0,400;1,500;1,700&family=Poppins:ital,wght@0,400;0,700;0,800;1,500&family=Work+Sans:ital,wght@0,400;0,700;1,500&display=swap');
 
 :root {
   /* Fonts */
@@ -10,6 +10,9 @@
 
   /* Colors */
   --white: #fff;
+
+  --main-background: #ecf0f1;
+  --blurple: #5865f2;
 
   --dracula-back: #282a36;
   --dracula-fore: #f8f8f2;
@@ -27,4 +30,68 @@
   --sleek-palesilver: #ccc3b8;
   --sleek-darklava: #4d3f2e;
   --sleek-missilegray: #99928a;
+}
+
+/* Universal/Body */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 1.5% 9%;
+  background-color: var(--main-background);
+}
+
+/* Header/Nav */
+header {
+  margin-bottom: 3.2rem;
+}
+
+header h1 {
+  font-family: var(--font-poppins);
+  font-weight: 800;
+  font-size: 5.5rem;
+  line-height: 1.2;
+}
+
+nav {
+  background-color: var(--blurple);
+  margin-top: 1rem;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+nav li::after {
+  content: '';
+  border-right: 1px solid var(--main-background);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+nav a {
+  color: var(--white);
+  font-family: var(--font-jetbrains);
+  text-decoration: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
