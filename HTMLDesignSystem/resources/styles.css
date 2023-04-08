@@ -1,0 +1,30 @@
+/* Imports and Variables */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:ital,wght@0,400;1,500;1,700&family=Poppins:ital,wght@0,400;0,700;1,500&family=Work+Sans:ital,wght@0,400;0,700;1,500&display=swap');
+
+:root {
+  /* Fonts */
+  --font-abril: 'Abril Fatface', cursive;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-worksans: 'Work Sans', sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+
+  /* Colors */
+  --white: #fff;
+
+  --dracula-back: #282a36;
+  --dracula-fore: #f8f8f2;
+  --dracula-purple: #bd93f9;
+  --dracula-green: #50fa7b;
+  --dracula-red: #ff5555;
+
+  --ocean-neonblue: #5271ff;
+  --ocean-cornflowerblue: #8396f3;
+  --ocean-lavenderblue: #bfccf7;
+  --ocean-babypowder: #fcfef6;
+
+  --sleek-davygrey: #4d4945;
+  --sleek-burlywood: #d4af7f;
+  --sleek-palesilver: #ccc3b8;
+  --sleek-darklava: #4d3f2e;
+  --sleek-missilegray: #99928a;
+}
