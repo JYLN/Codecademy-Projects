@@ -126,14 +126,27 @@ section .collapse {
   padding: 1.2rem;
   width: 100%;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 0.8rem;
+}
+
+section .collapse::after {
+  content: '+';
+  float: right;
+  font-weight: bold;
+}
+
+section .active::after {
+  content: '-';
 }
 
 .color-container,
 .font-container,
 .text-container {
   margin-bottom: 1.4rem;
+  max-height: 0;
+  overflow: auto;
+  transition: max-height 0.2s ease-in-out;
 }
 
 /* Color Section */
