@@ -100,6 +100,8 @@ nav a:hover {
 /* Section Styles */
 section {
   border: 2px solid var(--border-color);
+  border-radius: 0.4rem;
+  margin-bottom: 1.2rem;
   padding: 1.2rem 1.4rem;
 }
 
@@ -128,3 +130,100 @@ section .collapse {
 }
 
 /* Color Section */
+.color-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.color-container .color-panel {
+  border: 1px solid var(--border-color);
+  flex: 1 1 0;
+  text-align: center;
+  align-self: auto;
+  padding: 1.9rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-panel .color-label {
+  font-family: var(--font-worksans);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.color-panel .color-hex {
+  font-size: 1.2rem;
+  font-family: var(--font-jetbrains);
+  margin-top: 0.4rem;
+}
+
+.drac-background {
+  background-color: var(--dracula-back);
+  color: var(--dracula-fore);
+}
+
+.drac-foreground {
+  background-color: var(--dracula-fore);
+  color: var(--dracula-back);
+}
+
+.drac-purple {
+  background-color: var(--dracula-purple);
+}
+
+.drac-green {
+  background-color: var(--dracula-green);
+}
+
+.drac-red {
+  background-color: var(--dracula-red);
+}
+
+.ocean-white {
+  background-color: var(--white);
+}
+
+.ocean-neonblue {
+  background-color: var(--ocean-neonblue);
+  color: var(--white);
+}
+
+.ocean-cornflowerblue {
+  background-color: var(--ocean-cornflowerblue);
+  color: var(--white);
+}
+
+.ocean-lavenderblue {
+  background-color: var(--ocean-lavenderblue);
+}
+
+.ocean-babypowder {
+  background-color: var(--ocean-babypowder);
+}
+
+.sleek-davygrey {
+  background-color: var(--sleek-davygrey);
+  color: var(--white);
+}
+
+.sleek-burlywood {
+  background-color: var(--sleek-burlywood);
+}
+
+.sleek-palesilver {
+  background-color: var(--sleek-palesilver);
+}
+
+.sleek-darklava {
+  background-color: var(--sleek-darklava);
+  color: var(--white);
+}
+
+.sleek-missilegray {
+  background-color: var(--sleek-missilegray);
+}
