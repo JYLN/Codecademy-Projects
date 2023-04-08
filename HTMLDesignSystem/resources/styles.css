@@ -129,13 +129,18 @@ section .collapse {
   margin-bottom: 0.8rem;
 }
 
+.color-container,
+.font-container,
+.text-container {
+  margin-bottom: 1.4rem;
+}
+
 /* Color Section */
 .color-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   gap: 0.5rem;
-  margin-bottom: 1.2rem;
 }
 
 .color-container .color-panel {
@@ -226,4 +231,42 @@ section .collapse {
 
 .sleek-missilegray {
   background-color: var(--sleek-missilegray);
+}
+
+/* Font Section */
+.font-container {
+  font-size: 2.25rem;
+}
+
+.font-container p {
+  margin-bottom: 0.4rem;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+.abril {
+  font-family: var(--font-abril);
+}
+
+.work-sans {
+  font-family: var(--font-worksans);
+}
+
+.jetbrains {
+  font-family: var(--font-jetbrains);
 }
