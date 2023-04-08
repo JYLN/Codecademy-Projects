@@ -24,7 +24,7 @@
       <h2>Colors</h2>
       <hr />
       <!-- ? Dracula -->
-      <button id="dracula" class="collapse" type="button">Dracula</button>
+      <button class="collapse" type="button">Dracula</button>
       <article class="color-container">
         <aside class="color-panel drac-background">
           <p class="color-label">Background</p>
@@ -49,7 +49,7 @@
       </article>
 
       <!-- ? Ocean Waves -->
-      <button id="ocean-waves" class="collapse" type="button">Ocean Waves</button>
+      <button class="collapse" type="button">Ocean Waves</button>
       <article class="color-container">
         <aside class="color-panel ocean-white">
           <p class="color-label">White</p>
@@ -74,7 +74,7 @@
       </article>
 
       <!-- ? Sleek Paper -->
-      <button id="sleek-paper" class="collapse" type="button">Sleek Paper</button>
+      <button class="collapse" type="button">Sleek Paper</button>
       <article class="color-container">
         <aside class="color-panel sleek-davygrey">
           <p class="color-label">Davy's Grey</p>
@@ -139,34 +139,62 @@
       <h2>Text Styles</h2>
       <hr />
       <!-- ? Main Page Heading -->
-      <button class="collapse" type="button">Main Page Heading</button>
+      <button class="collapse" type="button">
+        <span class="bold poppins">Main Page Heading</span>
+      </button>
       <article class="text-container">
         <pre>
-          <code></code>
+          <code>
+            h1 {
+              font-family: Poppins;
+              font-weight: 800;
+              font-size: 5.5rem;
+              line-height: 1.2;
+            }
+          </code>
         </pre>
       </article>
 
       <!-- ? Subheading -->
-      <button class="collapse" type="button">Subheading</button>
+      <button class="collapse" type="button"><span class="abril">Subheading</span></button>
       <article class="text-container">
         <pre>
-          <code></code>
+          <code>
+            h2 {
+              font-family: 'Abril Fatface';
+              font-weight: 500;
+              font-size: 3.5rem;
+            }
+          </code>
         </pre>
       </article>
 
       <!-- ? Paragraph Text -->
-      <button class="collapse" type="button">Paragraphs</button>
+      <button class="collapse" type="button"><span class="work-sans">Paragraphs</span></button>
       <article class="text-container">
         <pre>
-          <code></code>
+          <code>
+            p {
+              font-family: 'Work Sans';
+              font-size: 1.4rem;
+            }
+          </code>
         </pre>
       </article>
 
       <!-- ? Code/Monospace -->
-      <button class="collapse" type="button">Code</button>
+      <button class="collapse" type="button"><span class="inline-code">Code</span></button>
       <article class="text-container">
         <pre>
-          <code></code>
+          <code>
+            .inline-code {
+              font-family: 'JetBrains Mono';
+              background-color: gray;
+              padding: 0.15rem 0.3rem;
+              border-radius: 0.15rem;
+              margin: 0.15rem;
+            }
+          </code>
         </pre>
       </article>
     </section>
