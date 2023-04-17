@@ -99,6 +99,6 @@ function drawHorizontalLine(x: number, y: number, length: number) {
 
 function drawVerticalLine(x: number, y: number, length: number) {
   for (let i = 0; i < length; i++) {
-    drawDot(x, y + 1);
+    drawDot(x, y + i);
   }
 }
