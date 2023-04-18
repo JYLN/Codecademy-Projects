@@ -42,4 +42,5 @@ export const restaurants = [
     distance: '12',
   },
 ];
-export type Restaurant = typeof restaurants[0][0];
+
+export type Restaurant = typeof restaurants[0];
