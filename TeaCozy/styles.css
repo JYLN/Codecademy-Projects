@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: seashell;
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 22px;
+}
+
+header {
+  display: flex;
+  height: 69px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid seashell;
+  z-index: 5;
+}
+
+header .logo {
+  height: 50px;
+  width: auto;
+}
+
+header nav {
+  display: flex;
+  gap: 24px;
+}
+
+header nav a {
+  color: seashell;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  top: 47px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  margin: 1rem;
+}
+
+#mission {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#mission h2,
+#mission h4 {
+  width: 100%;
+  padding: 10px;
+}
+
+#featured-tea {
+  padding: 3.5rem 0;
+}
+
+#featured-tea h2 {
+  margin-bottom: 8px;
+}
+
+#locations {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#locations h2,
+#locations .card-container {
+  background-color: transparent;
+}
+
+#contact {
+  height: 200px;
+  padding: 10px;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+}
+
+#contact h5 {
+  padding: 3px 0;
+}
+
+footer {
+  position: relative;
+  padding: 20px;
+  text-align: left;
+}
+
+.card-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.card-container > * {
+  flex-basis: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  padding: 20px 0;
+}
+
+.card p {
+  padding: 15px 0;
+}
