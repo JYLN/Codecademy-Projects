@@ -1,0 +1,256 @@
+/*? Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://use.typekit.net/rxx2wjw.css');
+
+/*? Variables */
+:root {
+  /* Colors */
+  --writers-block-1: hsla(38, 16%, 39%, 1);
+  --writers-block-2: hsla(37, 77%, 82%, 1);
+  --writers-block-3: hsla(36, 89%, 68%, 1);
+  --writers-block-4: hsla(37, 40%, 32%, 1);
+  --writers-block-5: hsla(36, 30%, 65%, 1);
+
+  /* Font Styles */
+  --handsome: handsome-pro, sans-serif;
+  --poppins: 'Poppins', sans-serif;
+  --expo: expo-serif-pro, serif;
+}
+
+/*? Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  font-family: var(--poppins);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+section:not(#hero) {
+  height: auto;
+  padding: 3.5rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+section:not(#hero):not(#contact) > h2 {
+  font-family: var(--expo);
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+/*? Header */
+header {
+  background-color: var(--writers-block-2);
+  max-width: 100%;
+  min-height: 8rem;
+  padding: 0.5rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--writers-block-4);
+}
+
+header .logo {
+  font-family: var(--handsome);
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 0;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a.nav-button {
+  font-family: var(--poppins);
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  line-height: 0;
+  border-radius: 2.5rem;
+  border: 2px solid transparent;
+}
+
+nav a.nav-button:hover,
+nav a.nav-button:active {
+  border: 2px solid var(--writers-block-4);
+}
+
+/*? Hero */
+#hero {
+  background-color: var(--writers-block-2);
+  min-height: 40rem;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  max-width: 35rem;
+}
+
+.hero-text > * {
+  color: var(--writers-block-4);
+}
+
+.hero-text h1 {
+  font-family: var(--expo);
+  font-size: 4rem;
+}
+
+.hero-text p {
+  font-size: 1.75rem;
+}
+
+/*? Services */
+#services {
+  background-color: var(--writers-block-1);
+}
+
+#services h2 {
+  color: var(--writers-block-3);
+}
+
+/*? Team */
+#team {
+  background-color: var(--writers-block-3);
+}
+
+#team h2 {
+  color: var(--writers-block-4);
+}
+
+/*? Contact */
+#contact {
+  background-color: var(--writers-block-1);
+  text-align: center;
+}
+
+#contact h2 {
+  font-family: var(--expo);
+  font-size: 3.5rem;
+  color: var(--writers-block-3);
+}
+
+#contact p {
+  color: var(--writers-block-2);
+  font-size: 1.6rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.form-container > * {
+  display: block;
+}
+
+.form-container #email {
+  padding: 1.5rem 2.5rem;
+  margin-right: 1.25rem;
+  width: 75%;
+  border-radius: 2rem;
+  font-family: var(--poppins);
+  font-size: 1.5rem;
+  color: var(--writers-block-4);
+}
+
+.form-container #submit {
+  border-radius: 2rem;
+  background-color: var(--writers-block-3);
+  color: var(--writers-block-1);
+  font-family: var(--poppins);
+  font-weight: bold;
+  font-size: 1.8rem;
+  border: 0.15rem solid transparent;
+  width: 25%;
+  min-width: 15%;
+}
+
+.form-container #submit:hover {
+  background-color: var(--writers-block-1);
+  color: var(--writers-block-2);
+  border: 0.15rem inset var(--writers-block-2);
+}
+
+.form-container #submit:active {
+  border: 0.15rem solid var(--writers-block-2);
+}
+
+/*? Footer */
+footer {
+  font-family: var(--expo);
+  font-size: 1.3rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--writers-block-2);
+  color: var(--writers-block-4);
+}
+
+/*? Cards */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 2rem;
+  display: flex;
+  flex-basis: 35rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team-card {
+  color: var(--writers-block-4);
+}
+
+.card h3,
+.team-card h3 {
+  font-family: var(--poppins);
+  font-size: 2.75rem;
+}
+
+.card p,
+.team-card {
+  font-size: 1.4rem;
+}
+
+.card {
+  background-color: var(--writers-block-2);
+  color: var(--writers-block-4);
+}
+
+.card h3 {
+  margin-bottom: 0.6rem;
+}
