@@ -24,3 +24,18 @@ let secretMessage = [
   'Learn',
   'JavaScript',
 ];
+
+secretMessage.pop();
+//console.log(secretMessage.length);
+
+secretMessage.push('to', 'Program');
+//console.log(secretMessage);
+
+secretMessage[secretMessage.indexOf('easily')] = 'right';
+
+secretMessage.shift();
+secretMessage.unshift('Programming');
+
+secretMessage.splice(secretMessage.indexOf('get'), 5, 'know,');
+
+console.log(secretMessage.join(' '));
