@@ -44,3 +44,23 @@ const nameStrings = [
   'Astral',
   'Arcane',
 ];
+
+// Random Idx Helper
+const generateRandomIdx = arrLength => Math.floor(Math.random() * (arrLength - 1));
+
+// Random Name String Helper
+const pickRandomName = arr => arr[generateRandomIdx(arr.length)];
+
+// Generate Username
+const generateUsername = arr => {
+  let user1 = pickRandomName(arr);
+  let user2 = pickRandomName(arr);
+
+  while (user1 === user2) {
+    user2 = pickRandomName(arr);
+  }
+
+  return `Random Username: ${user1} ${user2}`;
+};
+
+console.log(generateUsername(nameStrings));
