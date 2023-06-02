@@ -4,6 +4,10 @@
   @apply divide-y;
 }
 
+.search-results .card-header {
+  @apply flex w-full items-center self-center;
+}
+
 .search-results h2 {
-  @apply w-full self-center px-6 align-middle text-3xl font-bold;
+  @apply px-6 align-middle text-3xl font-bold;
 }

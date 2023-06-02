@@ -10,9 +10,14 @@ export default function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState('New Playlist');
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const search = useCallback(term => {
-    Spotify.search(term).then(setSearchResults);
+    setLoading(true);
+    Spotify.search(term).then(results => {
+      setSearchResults(results);
+      setLoading(false);
+    });
   }, []);
 
   const updatePlaylistName = useCallback(newName => {
@@ -48,7 +53,7 @@ export default function App() {
         <SearchBar onSearch={search} />
         <hr />
         <div id='App-cards'>
-          <SearchResults searchResults={searchResults} onAdd={addTrack} />
+          <SearchResults searchResults={searchResults} onAdd={addTrack} loading={loading} />
           <Playlist
             playlistName={playlistName}
             playlistTracks={playlistTracks}
