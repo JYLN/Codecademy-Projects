@@ -1,5 +1,7 @@
 // Components
+import Playlist from '../Playlist/Playlist';
 import SearchBar from '../SearchBar/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
 
 export default function App() {
   return (
@@ -9,7 +11,11 @@ export default function App() {
       </h1>
       <div id='App-main'>
         <SearchBar />
-        <div id='App-cards'></div>
+        <hr />
+        <div id='App-cards'>
+          <SearchResults />
+          <Playlist />
+        </div>
       </div>
     </>
   );
