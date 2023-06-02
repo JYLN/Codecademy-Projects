@@ -22,14 +22,10 @@
 
 @layer components {
   #App-cards {
-    @apply flex w-full flex-col gap-10 px-10 text-white lg:h-[675px] lg:flex-row lg:px-32;
+    @apply mb-8 flex h-[1280px] w-full flex-col gap-10 px-10 text-white lg:h-[675px] lg:flex-row lg:px-32;
   }
 
   .card {
-    @apply flex basis-3/6 flex-col justify-between border-2 border-slate-600;
-  }
-
-  .card h2 {
-    @apply sticky border-b-[1px] px-5 py-7 text-3xl font-bold;
+    @apply basis-1/2 rounded-xl border-2 border-slate-600;
   }
 }

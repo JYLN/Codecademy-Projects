@@ -1,0 +1,9 @@
+.search-results {
+  display: grid;
+  grid-template: 0.149fr 1fr / 1fr;
+  @apply divide-y;
+}
+
+.search-results h2 {
+  @apply w-full self-center px-6 align-middle text-3xl font-bold;
+}

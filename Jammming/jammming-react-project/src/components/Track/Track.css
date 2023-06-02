@@ -1,0 +1,11 @@
+.track {
+  @apply flex w-full items-center justify-between py-2;
+}
+
+.track-information h3 {
+  @apply font-bold;
+}
+
+.track-information p {
+  @apply text-zinc-400;
+}
