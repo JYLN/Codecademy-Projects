@@ -7,8 +7,8 @@ export default function Playlist() {
   return (
     <div className='card playlist'>
       <input defaultValue={'New Playlist'} />
-      <TrackList />
-      <Button />
+      <TrackList tracks={[]} />
+      <Button btn={true} text='Save Playlist' />
     </div>
   );
 }

@@ -1,8 +1,12 @@
 .playlist {
   display: grid;
-  grid-template: 0.175fr 1fr 0.1fr / 1fr;
+  grid-template: 75px 1fr 65px / 1fr;
 }
 
 .playlist input {
   @apply w-full border-b-[1px] bg-transparent px-6 text-3xl font-bold focus:underline focus:outline-none;
+}
+
+.playlist button.btn {
+  @apply mx-auto my-2 w-2/3;
 }

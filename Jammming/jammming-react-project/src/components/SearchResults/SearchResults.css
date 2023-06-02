@@ -1,6 +1,6 @@
 .search-results {
   display: grid;
-  grid-template: 0.149fr 1fr / 1fr;
+  grid-template: 75px 1fr / 1fr;
   @apply divide-y;
 }
 
