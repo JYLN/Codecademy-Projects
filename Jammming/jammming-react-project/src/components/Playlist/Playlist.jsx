@@ -5,7 +5,13 @@ import TrackList from '../TrackList/TrackList';
 import { useCallback } from 'react';
 import './Playlist.css';
 
-export default function Playlist({ playlistName, playlistTracks, onNameChange, onRemove }) {
+export default function Playlist({
+  playlistName,
+  playlistTracks,
+  onNameChange,
+  onRemove,
+  onSave,
+}) {
   const handleNameChange = useCallback(
     event => {
       onNameChange(event.target.value);
@@ -15,9 +21,9 @@ export default function Playlist({ playlistName, playlistTracks, onNameChange, o
 
   return (
     <div className='card playlist'>
-      <input onChange={handleNameChange} defaultValue={playlistName} />
+      <input onChange={handleNameChange} value={playlistName} />
       <TrackList tracks={playlistTracks} isRemoval={true} onRemove={onRemove} />
-      <Button btn={true} text='Save Playlist' />
+      <Button btn={true} text='Save Playlist' onClick={onSave} />
     </div>
   );
 }
@@ -27,4 +33,5 @@ Playlist.propTypes = {
   playlistTracks: PropTypes.array,
   onNameChange: PropTypes.func,
   onRemove: PropTypes.func,
+  onSave: PropTypes.func,
 };

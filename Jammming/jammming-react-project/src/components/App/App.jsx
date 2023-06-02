@@ -31,6 +31,14 @@ export default function App() {
     setPlaylistTracks(prev => prev.filter(curr => curr.id !== track.id));
   }, []);
 
+  const savePlaylist = useCallback(() => {
+    const trackUris = playlistTracks.map(track => track.uri);
+    Spotify.savePlaylist(playlistName, trackUris).then(() => {
+      setPlaylistName('New Playlist');
+      setPlaylistTracks([]);
+    });
+  }, [playlistName, playlistTracks]);
+
   return (
     <>
       <h1>
@@ -46,6 +54,7 @@ export default function App() {
             playlistTracks={playlistTracks}
             onNameChange={updatePlaylistName}
             onRemove={removeTrack}
+            onSave={savePlaylist}
           />
         </div>
       </div>
