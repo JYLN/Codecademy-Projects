@@ -8,9 +8,27 @@ import SearchResults from '../SearchResults/SearchResults';
 
 export default function App() {
   const [searchResults, setSearchResults] = useState([]);
+  const [playlistName, setPlaylistName] = useState('New Playlist');
+  const [playlistTracks, setPlaylistTracks] = useState([]);
 
   const search = useCallback(term => {
     Spotify.search(term).then(setSearchResults);
+  }, []);
+
+  const updatePlaylistName = useCallback(newName => {
+    setPlaylistName(newName);
+  }, []);
+
+  const addTrack = useCallback(
+    track => {
+      if (playlistTracks.some(savedTrack => savedTrack.id === track.id)) return;
+      setPlaylistTracks(prev => [...prev, track]);
+    },
+    [playlistTracks]
+  );
+
+  const removeTrack = useCallback(track => {
+    setPlaylistTracks(prev => prev.filter(curr => curr.id !== track.id));
   }, []);
 
   return (
@@ -22,8 +40,13 @@ export default function App() {
         <SearchBar onSearch={search} />
         <hr />
         <div id='App-cards'>
-          <SearchResults searchResults={searchResults} />
-          <Playlist />
+          <SearchResults searchResults={searchResults} onAdd={addTrack} />
+          <Playlist
+            playlistName={playlistName}
+            playlistTracks={playlistTracks}
+            onNameChange={updatePlaylistName}
+            onRemove={removeTrack}
+          />
         </div>
       </div>
     </>

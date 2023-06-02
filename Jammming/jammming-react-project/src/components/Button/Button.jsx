@@ -6,7 +6,9 @@ export default function Button({ text, onClick, btn }) {
       {text}
     </button>
   ) : (
-    <button onClick={onClick}>{text}</button>
+    <button className='track-action' onClick={onClick}>
+      {text}
+    </button>
   );
 }
 

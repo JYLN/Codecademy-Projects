@@ -24,7 +24,7 @@ export default function SearchBar({ onSearch }) {
         onChange={handleTermChange}
         value={term}
       />
-      <Button text='Search' onClick={search} />
+      <Button text='Search' onClick={search} btn={true} />
     </div>
   );
 }
