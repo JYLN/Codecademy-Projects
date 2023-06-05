@@ -4,10 +4,11 @@ import Hero from '../../components/hero';
 
 // import useParams
 // import Link
+import { Link, useParams } from 'react-router-dom';
 
 const HomePage = () => {
   const [data, setData] = useState(null);
-  const type = ''; // Fix me!
+  const { type } = useParams(); // Fix me!
 
   useEffect(() => {
     async function getPetsData() {
@@ -23,31 +24,27 @@ const HomePage = () => {
   }
 
   return (
-    <div className="page">
+    <div className='page'>
       <Hero />
       <h3>
-        <span className="pet-type-label">{type ? `${type}s` : 'Pets'}</span>{' '}
-        available for adoption near you
+        <span className='pet-type-label'>{type ? `${type}s` : 'Pets'}</span> available for
+        adoption near you
       </h3>
 
       {data.length ? (
-        <div className="grid">
-          {data.map((animal) => (
-            <a // Change me to a Link!
+        <div className='grid'>
+          {data.map(animal => (
+            <Link // Change me to a Link!
               key={animal.id}
-              href={`/${animal.type.toLowerCase()}/${animal.id}`}
-              className="pet"
-            >
+              to={`/${animal.type.toLowerCase()}/${animal.id}`}
+              className='pet'>
               <article>
-                <div className="pet-image-container">
+                <div className='pet-image-container'>
                   {
                     <img
-                      className="pet-image"
-                      src={
-                        animal.photos[0]?.medium ||
-                        '/missing-animal.png'
-                      }
-                      alt=""
+                      className='pet-image'
+                      src={animal.photos[0]?.medium || '/missing-animal.png'}
+                      alt=''
                     />
                   }
                 </div>
@@ -56,11 +53,11 @@ const HomePage = () => {
                 <p>Color: {animal.colors.primary}</p>
                 <p>Gender: {animal.gender}</p>
               </article>
-            </a> // Don't forget to change me!
+            </Link> // Don't forget to change me!
           ))}
         </div>
       ) : (
-        <p className="prompt">No {type}s available for adoption now.</p>
+        <p className='prompt'>No {type}s available for adoption now.</p>
       )}
     </div>
   );
